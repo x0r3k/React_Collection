@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import Router from './routing';
+import { BrowserRouter } from 'react-router-dom';
+// import TestPage from "./pages/testPage";
+// import Timer from "./mobx/timer";
+
+// const myTimer1 = new Timer();
+// const myTimer2 = new Timer();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {/* <TestPage timer={myTimer1}/>
+      <br/>
+      <TestPage timer={myTimer2}/> */}
+      <Router/>
+      {/* <div>Main page</div> */}
+    </BrowserRouter>
   );
 }
+
+// setInterval(() => {
+//   myTimer1.increaseTimer();
+//   myTimer2.increaseTimer();
+// }, 1000);
 
 export default App;

@@ -1,0 +1,19 @@
+@import "../../../styles/colors.scss";
+
+.background {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgb(0,0,0) 100%), url("../img/background.jpg");
+  background-color: black;
+  background-size: cover;
+}
+
+.header-content-text {
+  width: 50%;
+}
+
+.content {
+  background-color: black;
+}
+
+.card {
+  background-color: white;
+}

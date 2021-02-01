@@ -1,0 +1,63 @@
+@import "../../../styles/colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.navbar-custom {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 12rem;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .navbar-logo {
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 64px;
+      box-sizing: border-box;
+      vertical-align: middle;
+    }
+
+    span {
+      font-size: 2rem;
+      font-weight: 900;
+      font-family: 'Righteous', serif;
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+
+
+    .navbar-item {
+      padding: 0.25rem 0.75rem;
+
+      &.active {
+        .navbar-item-text {
+          color: $meadow;
+        }
+      }
+
+      .navbar-item-text {
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        font-family: 'Poppins', serif;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $meadow
+        }
+      }
+    }
+  }
+}

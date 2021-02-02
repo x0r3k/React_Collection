@@ -1,17 +1,16 @@
 import './styles/style.scss';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Header from '../../components/header/header';
-import HeaderContent from './components/headerContent';
-import Content from './components/content';
+import HomePart from './home/homePart';
+import ContentPart from './content/contentPart';
 
 export default function MainPage(props) {
+
   return (
-    <div className="full-page">
+    <div id="mainPage">
       <Header/>
-      <div className="background full-page">
-        <HeaderContent/>
-      </div>
-      <Content/>
+      <HomePart/>
+      <ContentPart/>
     </div>
   );
 }

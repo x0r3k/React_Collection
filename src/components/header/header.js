@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import './styles/style.scss';
 import Logo from './img/4.svg';
 
 export default function Header(props) {
+
+  function testScroll () {
+    if(document.documentElement.scrollTop > 50) console.log('changeClass');
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', testScroll, true)
+  }, []);
+
   return (
     <nav className="navbar navbar-custom fixed-top">
       <a href="#" className="navbar-logo">

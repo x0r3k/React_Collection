@@ -7,9 +7,16 @@
   padding: 2rem 12rem;
   align-items: center;
   position: fixed;
+  transition: all 0.2s;
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0;
+
+  &.collapsed-navbar {
+    padding: 0.5rem 5rem;
+    background-color: $charcoal;
+  }
 
   .navbar-logo {
     box-sizing: border-box;
@@ -39,6 +46,8 @@
 
     .navbar-item {
       padding: 0.25rem 0.75rem;
+      display: flex;
+      align-items: center;
 
       &.active {
         .navbar-item-text {
@@ -58,6 +67,52 @@
           color: $meadow
         }
       }
+
+      &.social-icons {
+        .social-icon-padding {
+          padding: 0rem 0.25rem;
+        }
+        
+        .svg-icon {
+          height: 2rem;
+          width: auto;
+          box-sizing: border-box;
+          vertical-align: middle;
+        }
+
+        .social-icon {
+          display: block;
+          height: 2rem;
+          width: 2rem;
+          box-sizing: border-box;
+          transition: background-image 0.3s;
+        }
+
+      }
     }
+  }
+}
+
+.facebook-logo {
+  background-image: url('../img/socials/facebook.svg');
+  background-size: cover;
+  &:hover {
+    background-image: url('../img/socials/facebook_hover.svg');
+  }
+}
+
+.twitter-logo {
+  background-image: url('../img/socials/twitter.svg');
+  background-size: cover;
+  &:hover {
+    background-image: url('../img/socials/twitter_hover.svg');
+  }
+}
+
+.instagram-logo {
+  background-image: url('../img/socials/instagram.svg');
+  background-size: cover;
+  &:hover {
+    background-image: url('../img/socials/instagram_hover.svg');
   }
 }

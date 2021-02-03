@@ -1,11 +1,20 @@
 import React, {useEffect, useRef} from 'react';
 import './styles/style.scss';
-import Logo from './img/4.svg';
+import Logo from './img/logo/4.svg';
+import FacebookLogo from './img/socials/facebook.svg';
+import InstagramLogo from './img/socials/instagram.svg';
+import TwitterLogo from './img/socials/twitter.svg';
 
 export default function Header(props) {
+  const navbarRef = useRef();
 
   function testScroll () {
-    if(document.documentElement.scrollTop > 50) console.log('changeClass');
+    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      navbarRef.current.classList.add('collapsed-navbar');
+    }
+    else {
+      navbarRef.current.classList.remove('collapsed-navbar');
+    }
   }
 
   useEffect(() => {
@@ -13,7 +22,7 @@ export default function Header(props) {
   }, []);
 
   return (
-    <nav className="navbar navbar-custom fixed-top">
+    <nav className="navbar navbar-custom fixed-top" ref={navbarRef}>
       <a href="#" className="navbar-logo">
         <img src={Logo} alt="site logo"/>
         <span className="text">Pro</span>
@@ -33,6 +42,23 @@ export default function Header(props) {
         </div>
         <div className="navbar-item">
           <a href="" className="navbar-link navbar-item-text">Contact</a>
+        </div>
+        <div className="navbar-item social-icons">
+          <span className="social-icon-padding">
+            <a href="">
+              <span className="facebook-logo social-icon"/>
+            </a>
+          </span>
+          <span className="social-icon-padding">
+            <a href="">
+              <span className="twitter-logo social-icon"/>
+            </a>
+          </span>
+          <span className="social-icon-padding">
+            <a href="">
+              <span className="instagram-logo social-icon"/>
+            </a>
+          </span>
         </div>
       </div>
     </nav>

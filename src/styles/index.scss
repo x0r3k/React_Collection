@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+//FULL PAGE STYLES
 body,
 html,
 #root,
@@ -44,6 +45,7 @@ html,
   padding: 0;
 }
 
+//TEXT STYLES
 .text {
   color: $white;
   font-family: 'Poppins', serif;
@@ -63,6 +65,7 @@ html,
   text-align: center;
 }
 
+//CENTERING
 .bf-center {
   position: absolute;
   top: 50%;
@@ -83,6 +86,79 @@ html,
   // left: 50%;
   transform: translate(0, -50%);
 }
+
+//CONTENT DISPLAYING
+.content-container {
+  margin: 0 auto; 
+  width: 100%;
+  // padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.col-6 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-4 {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.col-3 {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-2 {
+  -ms-flex: 0 0 16.666667%;
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+
+.col-1 {
+  -ms-flex: 0 0 8.333333%;
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-6, .col-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .content-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-container {
+    max-width: 1140px;
+  }
+}
+
+
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

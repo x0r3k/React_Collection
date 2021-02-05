@@ -1,0 +1,19 @@
+@import "../../../styles/colors.scss";
+
+.footer-custom {
+  background-color: $charcoal;
+  padding-top: 5rem;
+
+  .footer-blocks {
+    display: flex;
+    flex-direction: row;
+
+    .footer-block {
+      padding: 0 15px;
+    }
+  }
+
+  .footer-copyright {
+    padding: 1rem 0;
+  }
+}

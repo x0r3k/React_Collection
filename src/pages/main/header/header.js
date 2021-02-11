@@ -32,7 +32,7 @@ export default function Header(props) {
           <a href="" className="navbar-link navbar-item-text">Home</a>
         </div>
         <div className="navbar-item">
-          <a href="" className="navbar-link navbar-item-text">Intro</a>
+          <a href="#intro" className="navbar-link navbar-item-text">Intro</a>
         </div>
         <div className="navbar-item">
           <a href="" className="navbar-link navbar-item-text">Services</a>

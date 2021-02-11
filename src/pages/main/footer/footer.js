@@ -16,20 +16,43 @@ export default function Footer(props) {
           <h3 className="text bold-text">
             Links
           </h3>
-          <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div>
+            <a href='#' className="text url-text">Terms & Conditions</a>
+          </div>
+          <div>
+            <a href='#' className="text url-text">Privacy Policy</a>
+          </div>
+          <div>
+            <a href='#' className="text url-text">Advertising</a>
+          </div>
         </div>
         <div className="footer-block footer-block-tools col-2">
           <h3 className="text bold-text">
             Tools
           </h3>
-          <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <div>
+            <a href='#' className="text url-text">prettier.com</a>
+          </div>
+          <div>
+            <a href='#' className="text url-text">coolors.co</a>
+          </div>
+          <div>
+            <a href='#' className="text url-text">timeanddate.org</a>
+          </div>
         </div>
         <div className="footer-block footer-block-partners col-2">
           <h3 className="text bold-text">
             Partners
           </h3>
-          <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
+          <div>
+            <a href='#' className="text url-text">react.com</a>
+          </div>
+          <div>
+            <a href='https://onepagelove.com' className="text url-text">onepagelove.com</a>
+          </div>
+          <div>
+            <a href="https://www.w3schools.com" className="text url-text">w3schools.com</a>
+          </div>
         </div>
       </div>
       <div className="footer-copyright content-container">

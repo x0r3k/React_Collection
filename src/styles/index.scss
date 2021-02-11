@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import "./colors.scss";
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,12 +8,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 //FULL PAGE STYLES
 body,
 html,
 #root,
-#mainPage
-.full-page-pc { //pc - percent
+#mainPage .full-page-pc {
+  //pc - percent
   width: 100%;
   height: 100%;
 }
@@ -27,7 +30,8 @@ html,
   height: 100%;
 }
 
-.full-page-vp { //vp - viewPort
+.full-page-vp {
+  //vp - viewPort
   width: 100vw;
   height: 100vh;
 }
@@ -43,26 +47,6 @@ html,
 * {
   margin: 0;
   padding: 0;
-}
-
-//TEXT STYLES
-.text {
-  color: $white;
-  font-family: 'Poppins', serif;
-}
-
-.main-text {
-  text-transform: uppercase;
-  font-size: 3rem;
-  letter-spacing: 0.2rem;
-}
-
-.bold-text {
-  font-weight: bold;
-}
-
-.center-text {
-  text-align: center;
 }
 
 //CENTERING
@@ -88,8 +72,37 @@ html,
 }
 
 //CONTENT DISPLAYING
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column
+}
+
+.image-container {
+	overflow: hidden;
+	border-radius: 0.25rem;
+}
+
+.image-container img {
+	margin: 0;
+	border-radius: 0.25rem;
+	transition: all 0.3s;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container:hover img {
+	-moz-transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+} 
+
 .content-container {
-  margin: 0 auto; 
+  margin: 0 auto;
   width: 100%;
   // padding: 0 15px;
   box-sizing: border-box;
@@ -100,10 +113,22 @@ html,
   max-width: 100%;
 }
 
+.col-7 {
+  -ms-flex: 0 0 58.333333%;
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+}
+
 .col-6 {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
+}
+
+.col-5 {
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
 }
 
 .col-4 {
@@ -130,7 +155,14 @@ html,
   max-width: 8.333333%;
 }
 
-.col-1, .col-2, .col-3, .col-4, .col-6, .col-12 {
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-12 {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -157,8 +189,7 @@ html,
 }
 
 
-
-
+//IMAGE FORMATING
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

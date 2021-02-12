@@ -1,7 +1,7 @@
 import './styles/style.scss';
 import './styles/text.scss';
 import React, {useEffect} from 'react';
-import Header from './header/header';
+import Navbar from './navbar/navbar';
 import Footer from './footer/footer';
 import HomePart from './home/homePart';
 import ContentPart from './content/contentPart';
@@ -11,7 +11,7 @@ export default function MainPage(props) {
 
   return (
     <div id="mainPage">
-      <Header/>
+      <Navbar/>
       <HomePart/>
       <IntroPart/>
       <ContentPart/>

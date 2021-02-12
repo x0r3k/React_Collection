@@ -32,7 +32,7 @@ export default function HeaderContent(props) {
   }, []);
 
   return (
-    <div className="home-part full-height-vp background">
+    <div className="home-part full-height-vp background" id="home">
       <div className="bf-center home-content">
         <p className="text h1-text bold-text center-text uppercase-text">
           {'React '}

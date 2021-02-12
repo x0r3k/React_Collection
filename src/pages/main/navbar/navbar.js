@@ -1,14 +1,42 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './styles/style.scss';
 import Logo from './img/logo/4.svg';
-import FacebookLogo from './img/socials/facebook.svg';
-import InstagramLogo from './img/socials/instagram.svg';
-import TwitterLogo from './img/socials/twitter.svg';
+import NavbarItem from './components/navbarItem';
 
-export default function Header(props) {
+export default function Navbar(props) {
   const navbarRef = useRef();
 
-  function testScroll () {
+  let mockData = [
+    {
+      id: 'home',
+      href: '#home',
+      title: 'Home',
+    },
+    {
+      id: 'intro',
+      href: '#intro',
+      title: 'Intro',
+    },
+    {
+      id: 'services',
+      href: '',
+      title: 'Services',
+    },
+    {
+      id: 'projects',
+      href: '',
+      title: 'Projects',
+    },
+    {
+      id: 'contact',
+      href: '',
+      title: 'Contact',
+    }
+  ];
+
+  const [activeNavbarItem, setActiveNavbarItem] = useState('home');
+
+  function navbarScrollCollapse () {
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
       navbarRef.current.classList.add('collapsed-navbar');
     }
@@ -18,7 +46,7 @@ export default function Header(props) {
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', testScroll, true)
+    window.addEventListener('scroll', navbarScrollCollapse, true)
   }, []);
 
   return (
@@ -28,21 +56,16 @@ export default function Header(props) {
         <span className="text">Pro</span>
       </a>
       <div className="navbar-nav navbar-collapse">
-        <div className="navbar-item active">
-          <a href="" className="navbar-link navbar-item-text">Home</a>
-        </div>
-        <div className="navbar-item">
-          <a href="#intro" className="navbar-link navbar-item-text">Intro</a>
-        </div>
-        <div className="navbar-item">
-          <a href="" className="navbar-link navbar-item-text">Services</a>
-        </div>
-        <div className="navbar-item">
-          <a href="" className="navbar-link navbar-item-text">Projects</a>
-        </div>
-        <div className="navbar-item">
-          <a href="" className="navbar-link navbar-item-text">Contact</a>
-        </div>
+        { mockData.map(item => 
+          <NavbarItem 
+            key={item.id} 
+            href={item.href} 
+            title={item.title} 
+            id={item.id} 
+            isActive={item.id===activeNavbarItem}
+            setActive={setActiveNavbarItem}
+          />
+        )}
         <div className="navbar-item social-icons">
           <span className="social-icon-padding">
             <a href="">

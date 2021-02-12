@@ -2,18 +2,25 @@ import React, { useEffect } from 'react';
 import '../styles/style.scss';
 import IntroPicture from '../img/intro.jpg';
 import IntroCard from './components/introCard';
+import GitIcon from './img/git.svg';
+import FrameworkIcon from './img/framework.svg';
+import DebugIcon from './img/debug.svg';
+
 
 export default function MainPage(props) {
   const mockData = [
     {
+      icon: GitIcon,
       heading: 'Version Control',
       text: 'Version control is the procedure for tracking and controlling changes in your source code. By using version control software such as open source stalwart Git, you can track the changes in order to go back to a previous version of your work.'
     },
     {
+      icon: FrameworkIcon,
       heading: 'Front End Frameworks',
       text: 'Front end frameworks do for CSS what JavaScript Frameworks do for JavaScript. Since a lot of CSS begins with the same elements from one project to another, a framework which defines all these for you up front is valuable.'    
     },
     {
+      icon: DebugIcon,
       heading: 'Debugging & Testing',
       text: 'Bugs occur during the development process of any website. In order to ensure that things keep moving, you must test your code for bugs during the development process.'
     }
@@ -32,12 +39,12 @@ export default function MainPage(props) {
           </div>
           <div className="col-7">
             <div className="image-container">
-              <img src={IntroPicture} alt="" />
+              <img className="img-fluid" src={IntroPicture} alt="" />
             </div>
           </div>
         </div>
-        <div className="flex-row">
-          { mockData.map(item => <IntroCard heading={item.heading} text={item.text}/>)}
+        <div className="flex-row intro-cards">
+          { mockData.map((item, index) => <IntroCard key={index} icon={item.icon} heading={item.heading} text={item.text}/>)}
         </div>
       </div>
     </div>

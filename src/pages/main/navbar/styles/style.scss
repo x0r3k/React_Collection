@@ -16,6 +16,12 @@
   &.collapsed-navbar {
     padding: 0.5rem 5rem;
     background-color: $charcoal;
+
+    .navbar-logo {
+      img {
+        height: 48px;
+      }
+    }
   }
 
   .navbar-logo {

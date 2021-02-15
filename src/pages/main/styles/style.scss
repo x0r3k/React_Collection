@@ -20,26 +20,32 @@
   width: 50%;
 }
 
-.content, .intro {
+.intro {
   background-color: $white;
-}
-
-.intro-cards {
-  padding-top: 3rem;
-
-  .intro-card-icon {
-
-    .circle {
-      position: relative;
-      width: 6rem;
-      height: 6rem;
-      background-color: $meadow;
-      border-radius: 50%;
   
-      .icon {
-        width: 3rem;
-        height: 3rem;
+  .intro-cards {
+    padding-top: 3rem;
+  
+    .intro-card-icon {
+  
+      .circle {
+        position: relative;
+        width: 6rem;
+        height: 6rem;
+        background-color: $meadow;
+        border-radius: 50%;
+    
+        .icon {
+          width: 3rem;
+          height: 3rem;
+        }
       }
-    }
-  } 
+    } 
+  }
 }
+
+.service {
+  background-color: #fbfbfb;
+}
+
+
